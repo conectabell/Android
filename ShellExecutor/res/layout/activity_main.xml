@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".MainActivity" 
+    android:background="#50e306">
+ 
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Simple Shell Exec by Antonov"
+        android:textAlignment="center"
+        android:typeface="monospace" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt"
+        android:typeface="monospace" 
+        android:hint="Por ejemplo: ls, ps, ..." />
+
+    <Button
+        android:id="@+id/btn"
+        style="@style/Theme.AppCompat.Light.DarkActionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:text="Lanzar Comando" 
+        android:textColor="#54fb00"
+        android:background="@drawable/botonredondo"
+        android:layout_marginLeft="5px"
+        android:layout_marginRight="5px"
+        />
+    
+    <ScrollView
+    android:id="@+id/SCROLLER_ID"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:fillViewport="true">
+    
+     <HorizontalScrollView
+            android:layout_width="fill_parent"          
+            android:layout_height="fill_parent" >
+
+     <TextView
+         android:id="@+id/out"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:background="#151515"
+         android:textAlignment="textStart"
+         android:textColor="#54fb00"
+         android:textSize="10dp"
+         android:typeface="monospace" 
+         android:layout_marginLeft="1px"
+        android:layout_marginRight="1px"/>
+	</HorizontalScrollView>
+   </ScrollView>
+ 
+</LinearLayout>
